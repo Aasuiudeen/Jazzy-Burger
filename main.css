@@ -223,7 +223,7 @@ img {
   visibility: hidden;
   transform: translateY(-100%);
   transition: var(--transition);
-  z-index: 99999;
+  z-index: 888;
 }
 .side-bar li {
   margin-bottom: 24px;
