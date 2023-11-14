@@ -8,6 +8,7 @@ hamburger.addEventListener("click", () => {
 
 const imgFloat = document.querySelector(".img-float");
 const imgPri = document.querySelector(".img-pri");
+const imgSec = document.querySelector(".img-sec");
 
 window.addEventListener("DOMContentLoaded", () => {
   imgFloat.classList.add("open-img-float");
@@ -29,4 +30,21 @@ tog2.addEventListener("click", function () {
 });
 tog3.addEventListener("click", function () {
   hero.classList.toggle("open-hero");
+});
+
+imgPri.addEventListener("click", function () {
+  imgPri.classList.add("hide-img-pri");
+  imgSec.classList.add("open-img-sec");
+});
+imgSec.addEventListener("click", function () {
+  imgSec.classList.remove("open-img-sec");
+});
+
+const add1 = document.querySelector(".add-1");
+const add2 = document.querySelector(".add-2");
+const add2Value = document.querySelector(".add-value");
+
+add1.addEventListener("click", function () {
+  let nam = add2Value.value;
+  console.log(nam);
 });

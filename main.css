@@ -23,10 +23,10 @@
   --fixedWidth: 600px;
   --font-family: "Poppins", sans-serif;
   /* Box shadow */
-  /* --boxShadow:box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --boxShadow:box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
     --boxShadow-sm:box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
     --boxShadow-md:box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    --boxshadow-lg:box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); */
+    --boxshadow-lg:box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
 *,
@@ -276,26 +276,88 @@ img {
   place-items: center;
   height: calc(100% - 10%);
 }
+.header-y{
+  transform: rotate(-90deg);
+  position:absolute;
+  top: 0;
+  height: 100%;
+ color: rgb(255, 255, 255, 0.1);
+  font-size: 150px;
+  font-weight: 900;
+  text-transform: uppercase;
+  z-index: 0;
+  display: grid;
+  justify-content: flex-end;
+  
+}
 .img-pri {
   position: absolute;
   /* top: 0;
   left: 0; */
   width: 280px;
   transform: translateY(-400%);
-  transition: all linear 1.5s;
+  transition: all linear 2.3s;
+   z-index: 99;
+
+}
+.hide-img-pri{
+visibility: hidden;
+  height: 0;
+  width: 0;
+  transition: all linear 0.1s;
+}
+.img-sec{
+    position: absolute;
+  /* top: 0;
+  left: 0; */
+
+  transition: all linear 0.5s;
+    visibility: hidden;
+  height: 0;
+  width: 0;
+   z-index: 99;
+}
+.open-img-sec {
+      visibility: visible;
+  width: 280px;
+  height: auto;
 }
 .open-img-pri {
   transform: translateY(0%);
+  animation: beat 1s linear infinite
 }
 
 .img-float {
   width: 100vw;
   height: 100%;
   transform: translateY(-200%);
-  transition: all linear 1s;
+  transition: all linear 1.7s;
+
 }
 .open-img-float {
   transform: translateY(0%);
+    /* animation: float 0.3s linear infinite; */
+}
+@keyframes float {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+  
+}
+@keyframes beat {
+  0%{
+    transform: scale(1);
+  }
+   50%{
+    transform: scale(0.8);
+  }
+  100%{
+    transform: scale(1);
+  }
+  
 }
 /* Add icon styling */
 .add-icon {
@@ -375,6 +437,7 @@ img {
   top: 45%;
   right: 0%;
   margin-right: 8px;
+  z-index: 99;
 }
 .s-top,
 .s-middle,
