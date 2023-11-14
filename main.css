@@ -270,7 +270,6 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-
   width: 100%;
   display: grid;
   place-items: center;
@@ -288,6 +287,7 @@ img {
   z-index: 0;
   display: grid;
   justify-content: flex-end;
+  width: 100%;
   
 }
 .img-pri {
@@ -297,7 +297,7 @@ img {
   width: 280px;
   transform: translateY(-400%);
   transition: all linear 2.3s;
-   z-index: 99;
+   z-index: 777;
 
 }
 .hide-img-pri{
@@ -328,7 +328,7 @@ visibility: hidden;
 }
 
 .img-float {
-  width: 100vw;
+  width: 100%;
   height: 100%;
   transform: translateY(-200%);
   transition: all linear 1.7s;
@@ -436,8 +436,11 @@ visibility: hidden;
   display: grid;
   top: 45%;
   right: 0%;
-  margin-right: 8px;
-  z-index: 99;
+  place-items: end;
+  padding-right: 16px;
+  z-index: 889;
+  width: 100%;
+
 }
 .s-top,
 .s-middle,
